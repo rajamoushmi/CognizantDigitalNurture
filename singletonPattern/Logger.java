@@ -5,7 +5,7 @@ public class Logger {
 	private static Logger instance;
 	
 	Logger(){
-		System.out.println("In Logger Constructor");
+		System.out.println("In Logger Constructor ");
 	}
 	
 	public static Logger getInstance() {
