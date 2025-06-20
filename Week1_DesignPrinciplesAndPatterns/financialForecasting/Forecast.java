@@ -2,7 +2,7 @@ package financialForecasting;
 
 import java.util.Scanner;
 
-public class Forecast {
+public class Forecast{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
