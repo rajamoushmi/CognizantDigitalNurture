@@ -8,7 +8,7 @@ public class ProductSearch {
         Scanner scanner = new Scanner(System.in);
         String[] products = {
             "Laptop", "Smartphone", "Tablet", "Smartwatch", "Camera",
-            "Headphones", "Keyboard", "Mouse", "Monitor", "Charger"
+            "Headphones ", "Keyboard", "Mouse", "Monitor", "Charger"
         };
 
         System.out.println("Welcome to E-commerce Search!");
