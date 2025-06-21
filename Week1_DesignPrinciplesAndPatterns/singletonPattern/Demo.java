@@ -4,7 +4,7 @@ public class Demo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Logger l1= Logger.getInstance();
+		Logger l1 = Logger.getInstance();
 		l1.log("Login success");
 		
 		Logger l2= Logger.getInstance();
