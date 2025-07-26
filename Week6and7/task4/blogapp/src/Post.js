@@ -1,4 +1,3 @@
-// src/Post.js
 class Post {
   constructor(id, title, body){
     this.id = id;
@@ -7,4 +6,4 @@ class Post {
   }
 }
 
-export default Post; // <--- ADD THIS LINE
+export default Post; 

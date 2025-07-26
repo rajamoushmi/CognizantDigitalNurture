@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
-import trainersMock from './TrainersMock'; // Import mock data
+import { Link } from 'react-router-dom'; 
+import trainersMock from './TrainersMock'; 
 
 function TrainersList() {
   return (
@@ -9,7 +9,6 @@ function TrainersList() {
       <ul>
         {trainersMock.map(trainer => (
           <li key={trainer.trainerId}>
-            {/* Link to TrainerDetail component, passing trainerId as a URL parameter */}
             <Link to={`/trainers/${trainer.trainerId}`}>{trainer.name}</Link>
           </li>
         ))}

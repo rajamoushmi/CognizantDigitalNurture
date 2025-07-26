@@ -1,46 +1,39 @@
 import React from 'react';
-import Post from './Post'; // Import the Post class
-
+import Post from './Post';
 class Posts extends React.Component {
   constructor(props){
     super(props);
-    // 48. Initialize the component with an empty list of Posts in state
     this.state = {
       posts: [],
-      error: null, // To handle errors for componentDidCatch
+      error: null, 
     };
   }
 
-  // 49. Create a new method to load posts using Fetch API
   loadPosts = async () => {
     try {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts'); // 50. Use the provided URL
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts'); 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      // Map raw data to Post objects if needed, or just use as is for simplicity
       const loadedPosts = data.map(item => new Post(item.id, item.title, item.body));
-      this.setState({ posts: loadedPosts, error: null }); // Assign to component state
+      this.setState({ posts: loadedPosts, error: null }); 
     } catch (error) {
       console.error("Failed to fetch posts:", error);
-      this.setState({ error: error }); // Store error in state to be caught by componentDidCatch
+      this.setState({ error: error }); 
     }
   };
 
-  // 52. Implement componentDidMount() hook to call loadPosts()
   componentDidMount() {
     this.loadPosts();
   }
 
-  // 56. Define componentDidCatch() method to display errors
   componentDidCatch(error, info) {
     console.error("Error caught by componentDidCatch:", error, info);
     this.setState({ error: error });
     alert(`An error occurred: ${error.message}. Check console for details.`);
   }
 
-  // 54. Implement render() to display posts
   render() {
     const { posts, error } = this.state;
 

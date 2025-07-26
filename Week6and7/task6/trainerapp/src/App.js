@@ -1,9 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; // Import router components
-import Home from './Home';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; 
 import TrainersList from './TrainersList';
 import TrainerDetail from './TrainerDetail'; 
+<<<<<<< HEAD
 import './App.css'; // Keep default styles or add your own
+=======
+import './App.css';
+>>>>>>> 8725d43674bb32eb2768ffa631a81c03d385738f
 
 function App() {
   return (
@@ -11,14 +14,14 @@ function App() {
       <div className="App">
         <h1>My Academy Trainers App</h1> 
         <nav>
-          <Link to="/">Home</Link> |{' '} {/* Navigation link to Home */}
-          <Link to="/trainers">Show Trainers</Link> {/* Navigation link to TrainersList */}
+          <Link to="/">Home</Link> |{' '} 
+          <Link to="/trainers">Show Trainers</Link> 
         </nav>
-        <hr /> {/* Separator */}
+        <hr /> 
         <Routes>
-          <Route path="/" element={<Home />} /> {/* Route for Home component */}
-          <Route path="/trainers" element={<TrainersList />} /> {/* Route for TrainersList */}
-          <Route path="/trainers/:id" element={<TrainerDetail />} /> {/* Route for TrainerDetail with ID parameter */}
+          <Route path="/" element={<Home />} />
+          <Route path="/trainers" element={<TrainersList />} />
+          <Route path="/trainers/:id" element={<TrainerDetail />} /> 
         </Routes>
       </div>
     </Router>
