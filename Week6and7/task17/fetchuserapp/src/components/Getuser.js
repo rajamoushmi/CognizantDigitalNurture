@@ -1,4 +1,3 @@
-// src/components/Getuser.js
 import React, { Component } from "react";
 import "./Getuser.css";
 

@@ -1,4 +1,3 @@
-// src/UserPage.js
 import React from 'react';
 
 function UserPage() {
